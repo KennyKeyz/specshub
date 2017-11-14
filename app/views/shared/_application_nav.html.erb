@@ -1,12 +1,13 @@
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-      <a class="navbar-brand" href="#">SpecsHubGh</a>
+      
+      <%= link_to "SpecsHubGh",  root_path ,{ :class=>"navbar-brand" }%>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          <li class="nav-item">
+            <%= link_to "Home",  root_path ,{ :class=>"nav-link" }%>
           </li>
           <li class="nav-item">
             <%= link_to "About",  about_us_path ,{ :class=>"nav-link" }%>
@@ -15,7 +16,14 @@
             <%= link_to "Contact Us",  contact_path ,{ :class=>"nav-link" }%>
           </li>
           <li class="nav-item">
-            <%= link_to "Login",  new_user_session_path ,{ :class=>"nav-link" }%>
+            <% if current_user.nil? %>
+  <%= link_to new_user_session_path, class: 'nav-link' do %>Sign in<% end %>
+<% else %>
+  <%= link_to contact_path, class: 'nav-link' do %>Go to App<% end %>
+<li class="nav-item">
+  <%= link_to destroy_user_session_path, class: 'nav-link' do %>Logout <% end %>
+</li>
+<% end %>
           </li>
          
         </ul>
