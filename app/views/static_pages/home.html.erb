@@ -1,0 +1,72 @@
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+         <%= image_tag("spec 2.jpg", class: "first-slide") %>
+          <div class="container">
+            <div class="carousel-caption d-none d-md-block text-left">
+              <h1>Welcome to SpecsHub Gh.</h1>
+              <p>We deliver the best eye care services in Ghana</p>
+              <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <%= image_tag("spec.jpg", class: "first-slide") %>
+          <div class="container">
+            <div class="carousel-caption d-none d-md-block">
+              <h1>We care about you.</h1>
+              <p>We have well trained specialists who don't take your sight for granted</p>
+              <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <%= image_tag("spec 1.jpg", class: "first-slide") %>
+          <div class="container">
+            <div class="carousel-caption d-none d-md-block text-right">
+              <h1>Talk to us.</h1>
+              <p>Click here to talk to our team.</p>
+              <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+ 
+
+  <div class="container marketing">
+  	       <!-- Three columns of text below the carousel -->
+      <div class="row">
+        <div class="col-lg-4">
+          <%= image_tag("appointment.png", class: "rounded-circle", height: '140', width: '140') %>
+          
+          <h2>Schedule Appointment</h2>
+          <p>Our system is well equipped to to handle all your requests.Do you need to take an eye test ? Click the button below.</p>
+          <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <%= image_tag("contact_us.jpg", class: "rounded-circle", height: '140', width: '250') %>
+          <h2>Contact Us</h2>
+          <p>Our offices are not so far from you. click here to view our locations</p>
+          <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <%= image_tag("blog.png", class: "rounded-circle", height: '140', width: '200') %>
+          <h2>Visit our Blog</h2>
+          <p>We have so much to share.Click here to read our blog.</p>
+          <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+      </div><!-- /.row -->
