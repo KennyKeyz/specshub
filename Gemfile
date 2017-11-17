@@ -67,3 +67,5 @@ gem 'rails_admin', '~> 1.2'
 gem 'cancancan', '~> 2.0'
 
 gem 'petergate', '~> 1.8'
+
+gem 'dotenv-rails', '~> 2.2', '>= 2.2.1'
