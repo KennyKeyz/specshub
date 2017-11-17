@@ -2,6 +2,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   before_action :authenticate_user!
+  before_action :configure_permitted_parameters, if: :devise_controller?
 
 
 
@@ -14,6 +15,13 @@ class ApplicationController < ActionController::Base
     redirect_to "/", :alert => exception.message
   end
  
+
+ private
+  	def configure_permitted_parameters
+	    added_attrs = [:email, :password, :password_confirmation, :remember_me, :first_name, :middle_name, :last_name, :phone_number, :work_place]
+	    devise_parameter_sanitizer.permit :sign_up, keys: added_attrs
+	    devise_parameter_sanitizer.permit :account_update, keys: added_attrs
+	  end
 
 
 end

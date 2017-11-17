@@ -1,0 +1,7 @@
+<% @users.each do |user| %>
+<%= user.first_name %>
+<%= user.email %>
+<%= user.created_at.strftime("%d %b %y") %>
+<%= user.created_at.strftime("%H:%M") %>
+
+<%- end %>

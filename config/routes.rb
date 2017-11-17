@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
-  devise_for :users, controllers: {sessions:"sessions"}, path: '', path_names: { sign_in: 'login', sign_out: 'logout', sign_up: 'register' }
-  
+  devise_for :users, controllers: {sessions:"sessions"}, path: 'u', path_names: { sign_in: 'login', sign_out: 'logout', sign_up: 'register' }
+  resources :users
 
   
 
