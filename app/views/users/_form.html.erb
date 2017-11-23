@@ -1,3 +1,8 @@
+<div class="container">
+    <div class="card card-login mx-auto mt-5">
+      <div class="card-header">New User</div>
+      <div class="card-body">
+
 <%= form_with(model: @user, local: true) do |form| %>
 
   <% if @user.errors.any? %>
@@ -7,6 +12,8 @@
   <% end %>
 
  <div class="row">
+
+  
     <div class="col-md-6">
    
  <div class="form-group">
@@ -60,7 +67,8 @@
 
    <hr>
 
- 
+  <div class="row">
+    <div class="col-md-6">
  
   
 
@@ -71,3 +79,13 @@
 
 
 <% end %>
+
+       </div>
+     </div>
+     
+
+
+
+</div>
+</div>
+</div>
