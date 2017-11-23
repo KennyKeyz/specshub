@@ -1,0 +1,63 @@
+
+<div class="container">
+    <div class="card card-login mx-auto mt-5">
+      <div class="card-header">Appointment</div>
+      <div class="card-body">
+<%= form_with(model: appointment, local: true) do |form| %>
+  <% if appointment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(appointment.errors.count, "error") %> prohibited this appointment from being saved:</h2>
+
+      <ul>
+      <% appointment.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="row">
+  <div class="col-md-2"></div>
+
+  <div class="col-md-6">
+
+  <div class="form-group">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :appointment_name,class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :phone_number %>
+    <%= form.text_field :phone_number, id: :appointment_phone_number,class: 'form-control' %>
+  </div>
+
+   <div class="form-group">
+    <%= form.label :time %>
+    <div> 
+           <%= time_select :appointment, :time, {:default => {:hour => '00', :minute => '00'}} %>
+    </div>
+    
+
+    <div>
+         <%= date_select :appointment, :time, :default=> Date.today %>
+    </div>
+    <div >
+      <%= form.time_zone_select :time_zone, ActiveSupport::TimeZone.all.sort, default: "London" %>
+    </div>
+    
+ </div>
+
+  <div class="form-group">
+   
+    <%= form.submit "Create Appointment", class: 'btn btn-primary btn-block' %>
+  </div>
+<% end %>
+ </div>
+    </div>
+       </div> 
+           </div>
+
+
+
+                </div>
+      

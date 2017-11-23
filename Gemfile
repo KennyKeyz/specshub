@@ -70,4 +70,15 @@ gem 'petergate', '~> 1.8'
 
 gem 'dotenv-rails', '~> 2.2', '>= 2.2.1'
 
+
+# Use delayed job for running background jobs
+gem 'delayed_job_active_record', '~> 4.1', '>= 4.1.2'
+
+# Need daemons to start delayed_job
+gem 'daemons', '~> 1.2', '>= 1.2.5'
+
+
+
+gem 'twilio-ruby', '~> 5.4', '>= 5.4.4'
+
 ruby "2.4.2"
